@@ -14,7 +14,7 @@ spec:
       key: pwd
       name: tencent-cloud-default-redis-secret
       namespace: crossplane
-    vpcId: "tencent-cloud-default-vpc"
-    subnetId: "tencent-cloud-default-subnet"
+    vpcId: "vpc-9abd4x9l"
+    subnetId: "subnet-8q049gta"
   providerConfigRef:
     name: tencent-cloud-default-provider-config
