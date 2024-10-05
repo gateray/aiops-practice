@@ -1,6 +1,43 @@
 # 使用 YAML to Infra 模式创建云 Redis 数据库
 ## yaml2infra 目录结构
 ```
+.
+├── assets
+│   ├── 1-argocd-repository-setting.png
+│   ├── 2-argocd-application-setting.png
+│   ├── 3-argocd-sync-result.png
+│   └── 4-tencent-cloud-redis-created.png
+├── crossplane
+│   ├── provider
+│   │   └── tencent-cloud
+│   │       ├── default-provider-config.yaml
+│   │       ├── default-provider-cred-sealed-secret.yaml
+│   │       └── provider.yaml
+│   └── resources
+│       └── redis
+│           └── tencent-cloud
+│               ├── default-redis-sealed-secret.yaml
+│               ├── default-redis.yaml
+│               ├── default-subnet.yaml
+│               └── default-vpc.yaml
+├── README.md
+└── terraform
+    ├── dev
+    │   ├── config.yaml
+    │   ├── main.tf
+    │   ├── variables.tf
+    │   └── version.tf
+    └── modules
+        ├── cvm
+        │   ├── main.tf
+        │   ├── outputs.tf
+        │   ├── variables.tf
+        │   └── version.tf
+        └── k3s
+            ├── main.tf
+            ├── outputs.tf
+            └── variables.tf
+
 ```
 
 ## terraform申请cvm、安装k3s、crossplane、argocd
@@ -76,3 +113,5 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.pas
 kubectl port-forward svc/argocd-server -n argocd 8080:80
 ```
 
+## 最终效果图
+![argocd配置github仓库连接](assets/1-argocd-repository-setting.png)
