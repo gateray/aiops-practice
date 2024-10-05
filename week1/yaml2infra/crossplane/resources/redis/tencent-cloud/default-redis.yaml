@@ -16,3 +16,5 @@ spec:
       namespace: crossplane
     vpcId: "tencent-cloud-default-vpc"
     subnetId: "tencent-cloud-default-subnet"
+  providerConfigRef:
+    name: tencent-cloud-default-provider-config
