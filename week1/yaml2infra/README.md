@@ -114,4 +114,14 @@ kubectl port-forward svc/argocd-server -n argocd 8080:80
 ```
 
 ## 最终效果图
+argocd配置github仓库连接:
 ![argocd配置github仓库连接](assets/1-argocd-repository-setting.png)
+
+argocd应用配置：
+![argocd应用配置](assets/2-argocd-application-setting.png)
+
+argocd同步yaml结果：
+![argocd同步yaml结果](assets/3-argocd-sync-result.png)
+
+tencent cloud redis实例创建结果：
+![tencent cloud redis实例创建结果](assets/4-tencent-cloud-redis-created.png)
