@@ -226,3 +226,7 @@ go.work.sum
 
 # env file
 .env
+
+
+# kubeconfig
+config.yaml

@@ -1,0 +1,18 @@
+apiVersion: redis.tencentcloud.crossplane.io/v1alpha1
+kind: Instance
+metadata:
+  name: tencent-cloud-default-redis
+spec:
+  forProvider:
+    name: default-redis
+    typeId: 15  # Redis 6.2 Memory Edition (Standard Architecture)
+    memSize: 256
+    availabilityZone: "ap-guangzhou-6"
+    chargeType: "POSTPAID"
+    forceDelete: true
+    passwordSecretRef:
+      key: pwd
+      name: tencent-cloud-default-redis-secret
+      namespace: crossplane
+    vpcId: "tencent-cloud-default-vpc"
+    subnetId: "tencent-cloud-default-subnet"

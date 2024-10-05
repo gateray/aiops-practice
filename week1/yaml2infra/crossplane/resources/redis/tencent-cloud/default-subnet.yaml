@@ -1,0 +1,13 @@
+apiVersion: vpc.tencentcloud.crossplane.io/v1alpha1
+kind: Subnet
+metadata:
+  name: tencent-cloud-default-subnet
+spec:
+  forProvider:
+    availabilityZone: "ap-guangzhou-6"
+    cidrBlock: "10.0.0.0/24"
+    name: "default-subnet"
+    vpcIdRef:
+      name: "tencent-cloud-default-vpc"
+  providerConfigRef:
+    name: tencent-cloud-default-provider-config
