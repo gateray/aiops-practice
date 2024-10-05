@@ -227,6 +227,8 @@ go.work.sum
 # env file
 .env
 
+# vi
+*.swp
 
 # kubeconfig
 config.yaml

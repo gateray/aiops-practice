@@ -66,3 +66,13 @@ kubectl -n crossplane create secret generic tencent-cloud-default-redis-secret -
 ```
 
 ## 配置argocd自动拉取资源清单
+argocd默认帐号为：admin
+默认密码获取方式：
+```
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d
+```
+开启argocd webui端口转发
+```
+kubectl port-forward svc/argocd-server -n argocd 8080:80
+```
+
